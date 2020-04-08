@@ -37,7 +37,7 @@ test "PIND: 0x00, PINB0: 1 => PORTB[2:1]: 00"
 setPIND 0x00
 setPINB 1
 continue 2
-expectPORTB 0x01
+expectPORTB 0x00
 checkResult
 
 test "PIND: 0x03, PINB0: 0 => PORTB[2:1]: 10"
@@ -51,7 +51,7 @@ test "PIND: 0x03, PINB0: 1 => PORTB[2:1]: 10"
 setPIND 0x03
 setPINB 1
 continue 2
-expectPORTB 0x05
+expectPORTB 0x04
 checkResult
 
 test "PIND: 0xEF, PINB0: 0 => PORTB[2:1]: 01"
@@ -65,7 +65,7 @@ test "PIND: 0xEF, PINB0: 1 => PORTB[2:1]: 01"
 setPIND 0xEF
 setPINB 1
 continue 2
-expectPORTB 0x03
+expectPORTB 0x02
 checkResult
 
 # Report on how many tests passed/tests ran

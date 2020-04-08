@@ -20,7 +20,7 @@ int main(void) {
     unsigned short weight = 0x00;
     while (1) {
         weight = (PIND<<1) + (PINB&0x01);
-        PORTB = ((weight>5&&weight<70)<<2) + ((weight>=70)<<1) + (PINB&0x01);
+        PORTB = ((weight>5&&weight<70)<<2) + ((weight>=70)<<1);
     }
     return 1;
 }
